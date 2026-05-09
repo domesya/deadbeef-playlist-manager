@@ -31,6 +31,5 @@ jobs:
         uses: ncipollo/release-action@v1.12.0
         with:
           artifacts: "ddbpm-linux-release.zip"
-          # This line tells the action which tag to use
           tag: ${{ github.ref_name }} 
           token: ${{ secrets.GITHUB_TOKEN }}
