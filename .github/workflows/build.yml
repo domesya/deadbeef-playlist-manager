@@ -24,8 +24,10 @@ jobs:
        - name: Upload artifact ddbpm-linux-release.zip
          uses: actions/upload-artifact@v3
          with:
-          name: ddbpm-linux-release
-          path: ./rel
+           name: ddbpm-linux-release
+           path: ./rel
+
+          
       # - name: Archive Release
       #   uses: thedoctor0/zip-release@0.7.5
       #   with:
