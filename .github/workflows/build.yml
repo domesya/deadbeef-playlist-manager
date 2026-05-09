@@ -33,3 +33,5 @@ jobs:
           artifacts: "ddbpm-linux-release.zip"
           tag: ${{ github.ref_name }} 
           token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
+          replacesArtifacts: true
