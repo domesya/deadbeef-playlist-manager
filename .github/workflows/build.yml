@@ -1,7 +1,5 @@
 name: deadbeef playlist manager plugin build
 
-on: [push,pull_request]
-
 jobs:
   build_linux:
     name: Linux
