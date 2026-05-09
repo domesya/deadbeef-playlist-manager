@@ -21,23 +21,14 @@ jobs:
           make
           mkdir ./rel
           mv ./*.so ./rel
-        
-      - name: Upload artifact ddbpm-linux-release.zip
-        uses: actions/upload-artifact@v3
-        with:
-          name: ddbpm-linux-release
-          path: ./rel
 
-          
-      # - name: Archive Release
-      #   uses: thedoctor0/zip-release@0.7.5
-      #   with:
-      #     type: 'zip'
-      #     filename: 'ddbpm-linux-release.zip'
-      #     path: ./rel
-      # - name: Upload Release
-      #   uses: ncipollo/release-action@v1.12.0
-      #   with:
-      #     artifacts: "ddbpm-linux-release.zip"
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-          
+      - name: Zip the directory
+        run: zip -r ddbpm-linux-release.zip ./rel 
+      
+      - name: Create Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: "ddbpm-linux-release.zip"
+          # This line tells the action which tag to use
+          tag: ${{ github.ref_name }} 
+          token: ${{ secrets.GITHUB_TOKEN }}
