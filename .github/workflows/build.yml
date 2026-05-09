@@ -22,11 +22,11 @@ jobs:
       - name: Build the plugin
         run: |
           make
-          mkdir ./rel
-          mv ./*.so ./rel
+          mkdir ./ddbpm-linux
+          mv ./*.so ./ddbpm-linux
 
       - name: Zip the directory
-        run: zip -r ddbpm-linux-release.zip ./rel 
+        run: zip -r ddbpm-linux-release.zip ./ddbpm-linux
       
       - name: Create Release
         uses: ncipollo/release-action@v1.12.0
