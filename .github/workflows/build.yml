@@ -21,11 +21,12 @@ jobs:
           make
           mkdir ./rel
           mv ./*.so ./rel
-       - name: Upload artifact ddbpm-linux-release.zip
-         uses: actions/upload-artifact@v3
-         with:
-           name: ddbpm-linux-release
-           path: ./rel
+        
+      - name: Upload artifact ddbpm-linux-release.zip
+        uses: actions/upload-artifact@v3
+        with:
+          name: ddbpm-linux-release
+          path: ./rel
 
           
       # - name: Archive Release
