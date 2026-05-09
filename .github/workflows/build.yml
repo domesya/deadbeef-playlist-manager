@@ -1,5 +1,8 @@
 name: deadbeef playlist manager plugin build
 
+on:
+  workflow_dispatch: {}
+
 jobs:
   build_linux:
     name: Linux
